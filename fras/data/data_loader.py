@@ -4,7 +4,7 @@ import pandas as pd
 import os
 import requests
 from pathlib import Path
-from bireport.definitions import DATASET_DIR
+from fras.definitions import DATASET_DIR
 
 def download_file(url, dest_folder):
     Path(dest_folder).mkdir(parents=True, exist_ok=True)

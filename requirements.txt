@@ -1,2 +1,7 @@
+numpy
 pandas
 seaborn
+scikit-learn
+lightgbm
+xgboost
+torch

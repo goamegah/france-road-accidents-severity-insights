@@ -1,4 +1,4 @@
-<h1 align="center">Analysis and Machine Learning model for predicting France Road Accident Severity</h1>
+<h1 align="center">Analysis and Machine Learning for predicting France Road Accident Severity</h1>
 
 <h3 align="center">
     <a href="https://www.iledefrance.fr/"><img style="float: middle; padding: 10px 10px 10px 10px;" width="200" height="80" src="assets/gouv.png" /></a>

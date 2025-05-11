@@ -6,7 +6,10 @@ import requests
 from pathlib import Path
 from fras.definitions import DATASET_DIR
 
-def download_file(url, dest_folder):
+def download_file(url, dest_folder: str) -> str:
+    """
+    Télécharge un fichier depuis une URL et le sauvegarde dans un dossier local.
+    """
     Path(dest_folder).mkdir(parents=True, exist_ok=True)
     local_filename = url.split("/")[-1] + ".csv"
     local_path = os.path.join(dest_folder, local_filename)
@@ -19,7 +22,7 @@ def download_file(url, dest_folder):
         print(f"Already downloaded: {local_filename}")
     return local_path
 
-def clean_column_names(df):
+def clean_column_names(df : pd.DataFrame) -> pd.DataFrame:
     df.columns = (
         df.columns
         .str.strip()
@@ -29,7 +32,10 @@ def clean_column_names(df):
     )
     return df
 
-def standardize_columns(df, year):
+def standardize_columns(df : pd.DataFrame, year: int) -> pd.DataFrame:
+    """
+    Harmonise les colonnes selon l'année.
+    """
     if year == 2022:
         df = df.rename(columns={"accident_id": "num_acc"})
     return df
@@ -105,7 +111,10 @@ def load_data(year, base_folder=DATASET_DIR):
 
     return full_df.reset_index(drop=True)
 
-def merge_years(df_list):
+def merge_years(df_list : list[pd.DataFrame]) -> pd.DataFrame:
+    """
+    Fusionne plusieurs DataFrames en un seul.
+    """
     return pd.concat(df_list, ignore_index=True)
 
 # Exemple d'utilisation :

@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-def clean_column_names(df):
+def clean_column_names(df: pd.DataFrame) -> pd.DataFrame:
     """
     Nettoie les noms de colonnes : minuscule, snake_case.
     """
@@ -15,7 +15,7 @@ def clean_column_names(df):
     )
     return df
 
-def clean_dataset(df):
+def clean_dataset(df: pd.DataFrame, remove_dups: bool = True, dup_subset=None, dup_keep='first') -> pd.DataFrame:
     """
     Nettoie un DataFrame :
     - Suppression caractères parasites
@@ -44,6 +44,8 @@ def clean_dataset(df):
         df['hrmn'] = df['hrmn'].astype(str).str.replace(':', '', regex=False).str.zfill(4)
         df['heure'] = pd.to_numeric(df['hrmn'].str[:2], errors='coerce')
         df['minute'] = pd.to_numeric(df['hrmn'].str[2:], errors='coerce')
+    if remove_dups:
+        df = df.drop_duplicates(subset=dup_subset, keep=dup_keep)
 
     return df.reset_index(drop=True)
 

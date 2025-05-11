@@ -89,10 +89,10 @@ def load_data(year, base_folder=DATASET_DIR):
         df = standardize_columns(df, year)
         data_files[key] = df
 
-    carac = data_files['carac']
-    lieux = data_files['lieux']
-    vehicules = data_files['vehicules']
-    usagers = data_files['usagers']
+    carac: pd.DataFrame = data_files['carac']
+    lieux: pd.DataFrame = data_files['lieux']
+    vehicules: pd.DataFrame = data_files['vehicules']
+    usagers: pd.DataFrame = data_files['usagers']
 
     carac_lieux = carac.merge(lieux, on='num_acc', how='left')
     carac_lieux_vehicules = carac_lieux.merge(vehicules, on='num_acc', how='left')

@@ -37,7 +37,7 @@ setup(
     url=URL,
     python_requires=REQUIRES_PYTHON,
     install_requires=REQUIRED,
-    packages=[p for p in find_packages(exclude=("*tests.*", "*tests")) if p.startswith('bireport')],
+    packages=[p for p in find_packages(exclude=("*tests.*", "*tests")) if p.startswith('fras')],
     include_package_data=True,
     classifiers=[
         # Trove classifiers

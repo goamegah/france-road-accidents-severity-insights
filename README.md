@@ -5,7 +5,7 @@
 </h3>
 
 
-**Bases de données annuelles des accidents corporels de la circulation routière - Années de 2005 à 2023**
+## Bases de données annuelles des accidents corporels de la circulation routière - Années de 2005 à 2023
 
 Description
 Pour chaque accident corporel (soit un accident survenu sur une voie ouverte à la circulation publique, impliquant au 
@@ -23,6 +23,12 @@ de 2019 dans l’open data) avec une description simplifiée. Cela comprend des 
 ,telles que renseignées ainsi que des informations concernant les caractéristiques de l’accident et son lieu, les 
 véhicules impliqués et leurs victimes.
 
+## Analyse de données
+Cette analyse à été restreinte sur la période 2019-2023.
+
+![](assets/Accidents%20de%20la%20Route%20en%20France%20(2019–2023).png)
+
+## Ressources
 - datasets
     -  https://www.data.gouv.fr/fr/datasets/bases-de-donnees-annuelles-des-accidents-corporels-de-la-circulation-routiere-annees-de-2005-a-2023/
 - Description des variables
@@ -31,11 +37,12 @@ véhicules impliqués et leurs victimes.
     -  les usagers accidentés sont classés en trois catégories de victimes plus les indemnes
 
 
-### Client
+**La réalisation de ce travail est à destination**
 - Groupe d'étude sur la sécurité routière
 - Ministères, institutions publiques, constructeurs
 automobiles, associations d'usagers, etc.
 - En attente d'analyse, outils de simulations et préconisations
 
-### Modèle
-• Prédiction de la gravité des accidents de la route
+## Modélisation
+
+![](assets/mod.png)

@@ -2,8 +2,8 @@ from pathlib import Path
 from setuptools import setup, find_packages
 
 
-NAME = 'bireport'
-DESCRIPTION = 'BI Report'
+NAME = 'fras'
+DESCRIPTION = 'France Road Accident Severity Analysis and Machine Learning'
 URL = ''
 AUTHOR = 'Godwin AMEGAH'
 EMAIL = 'komlan.godwin.amegah@gmail.com'
@@ -13,7 +13,7 @@ HERE = Path(__file__).parent
 REQUIRES_FILE = HERE / 'requirements.txt'
 REQUIRED = [i.strip() for i in open(REQUIRES_FILE) if not i.startswith('#')]
 
-for line in open('bireport/__init__.py'):
+for line in open('fras/__init__.py'):
     line = line.strip()
     if '__version__' in line:
         context = {}
